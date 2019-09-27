@@ -1,0 +1,38 @@
+body{
+    background-color: lightseagreen;
+    background-size: cover;
+}
+
+h1{
+    color: black;
+    text-align: center;
+}
+
+hr{
+    color: blue;
+}
+
+p{
+    color : blue;
+}
+
+.Form{
+    text-align: left;
+    width: 300px;
+    border: 15px solid blueviolet;
+    padding: 50px;
+    margin: 0 auto;
+    display: table;
+}
+
+label{
+}
+
+.inp{
+    width: 100%;
+}
+
+footer{
+    clear: both;
+    text-align: center;
+}

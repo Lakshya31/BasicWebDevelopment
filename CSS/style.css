@@ -1,0 +1,48 @@
+body{
+    background-image: url(https://images.all-free-download.com/images/graphiclarge/wildlife_background_reindeer_birds_moon_icons_silhouette_design_6829750.jpg);
+    background-size: cover;
+    margin: 0px;
+}
+
+h1{
+    color: darkgreen;
+    font-family: fantasy;
+    width: 400px;
+    text-align: center;
+    border-bottom: 5px solid darkgreen;
+    border-right: 5px solid darkgreen;
+    margin: 50px;
+    box-shadow: 5px 5px 0px #888888;
+}
+
+hr{
+    color: blue;
+}
+
+p{
+    color : blue;
+}
+
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img{
+    width: 400px;
+    height: 400px;
+    border: 10px solid black;
+    padding: 20px solid green;
+    margin: 20px;
+    transition:all 1s;
+}
+
+img:hover{
+    transform: scale(1.05)
+}
+
+footer{
+    clear: both;
+    text-align: center;
+}
