@@ -1,3 +1,5 @@
+var _ = require('lodash')
+
 var ul = document.getElementById("TodoList");
 var input = document.getElementById("inputbox");
 var AddItem = document.getElementById("AddItem");
