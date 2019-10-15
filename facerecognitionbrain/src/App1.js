@@ -77,29 +77,33 @@ class App extends React.Component {
   }
 
   render(){
+    let constant1 = <Particles params={ParticleOptions} className="Particles" />
+    let conditional;
+
+    if(this.state.route === "home"){
+      conditional = <div>
+        <Navigation OnRouteChange = {this.OnRouteChange} />
+        <Logo />
+        <Rank/>
+        <ImageLinkForm OnInputChange={this.OnInputChange} OnSubmit={this.OnSubmit}/>
+        <FaceRecognition box={this.state.box} imageURL = {this.state.imageURL} />
+      </div>
+    }
+    else{
+      if(this.state.route === "signin"){
+        conditional = <SignIn OnRouteChange={this.OnRouteChange} />
+      }
+      else{
+        conditional = <Register OnRouteChange = {this.OnRouteChange} />
+      }
+    }
     return (
       <div className="App">
-        <Particles 
-        params={ParticleOptions}
-        className="Particles"
-        />
-        {this.state.route === "home"
-          ? <div>
-              <Navigation OnRouteChange = {this.OnRouteChange} />
-              <Logo />
-              <Rank/>
-              <ImageLinkForm OnInputChange={this.OnInputChange} OnSubmit={this.OnSubmit}/>
-              <FaceRecognition box={this.state.box} imageURL = {this.state.imageURL} />
-            </div>
-          :(
-            this.state.route === "signin"
-            ? <SignIn OnRouteChange={this.OnRouteChange} />
-            : <Register OnRouteChange = {this.OnRouteChange} />
-          )
-        }
+        {constant1}
+        {conditional}
       </div>
     );
-  }
+    }
 }
 
 export default App;
