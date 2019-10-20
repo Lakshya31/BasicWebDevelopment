@@ -1,13 +1,17 @@
-var express = require('express');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
 
-var app = express();
+app.use(bodyParser.urlencoded({ extended: true }))
 
-app.get("/",(req,res)=>{
-    console.log("Hello Root!")
+app.post("/",(req,res)=>{
+    recieved = req.body;
+    console.log(recieved)
+    if(recieved !== undefined){
+        res.send("Hello Root!");
+    }
+    
 })
 
-app.get("/profile",(req,res)=>{
-    console.log("Hello Profile!")
-})
 
 app.listen(3000);
